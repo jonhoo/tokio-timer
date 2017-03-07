@@ -463,13 +463,3 @@ impl From<TimerError> for io::Error {
         io::Error::new(io::ErrorKind::Other, src)
     }
 }
-
-impl From<TimerError> for () {
-    fn from(_: TimerError) -> () {
-    }
-}
-
-impl<T> From<TimeoutError<T>> for () {
-    fn from(_: TimeoutError<T>) -> () {
-    }
-}
